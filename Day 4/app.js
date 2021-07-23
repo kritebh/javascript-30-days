@@ -20,3 +20,26 @@ const inventors = [
     'Berne, Eric', 'Berra, Yogi', 'Berry, Wendell', 'Bevan, Aneurin', 'Ben-Gurion, David', 'Bevel, Ken', 'Biden, Joseph', 'Bennington, Chester', 'Bierce, Ambrose',
     'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
   ];
+//filter
+  const fifteen = inventors.filter((i)=>{if(i.year>=1500 && i.year<1600)return true})
+  // console.table(fifteen);
+
+
+//map
+const fullNames = inventors.map(i=>{return i.first+' '+i.last})
+// console.log(fullNames);
+
+
+// sort 
+const ordered = inventors.sort((a,b)=>a.year>b.year?1:-1)
+// console.log(ordered);
+const oldest = inventors.sort(a,b=>{
+  
+})
+
+//reduce 
+const totalYears = inventors.reduce((total,i)=>{
+  return total+(i.passed-i.year)
+},0)
+console.log(totalYears);
+
